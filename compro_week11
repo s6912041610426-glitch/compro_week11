@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// ฟังก์ชันคำนวณค่าเฉลี่ยและคืนค่า float
+float average(int a, int b, int c) {
+    return (a + b + c) / 3.0; // หารด้วย 3.0 เพื่อให้ผลลัพธ์เป็น float
+}
+
+int main() {
+    int math, physics, chemistry;
+    float avg;
+
+    // main() เป็นส่วนรับค่าคะแนน
+    printf(”Enter Math score: “);
+    scanf(”%d“, &math);
+    printf(”Enter Physics score: “);
+    scanf(”%d“, &physics);
+    printf(”Enter Chemistry score: “);
+    scanf(”%d“, &chemistry);
+
+    // เรียกใช้ฟังก์ชัน average
+    avg = average(math, physics, chemistry);
+
+    // แสดงผลคะแนนแต่ละวิชาพร้อมค่าเฉลี่ย
+    printf(”\n-- Results —\n“);
+    printf(”Math: %d\n“, math);
+    printf(”Physics: %d\n“, physics);
+    printf(”Chemistry: %d\n“, chemistry);
+    printf(”Average Score: %.2f\n“, avg);
+
+    return 0;
+}
